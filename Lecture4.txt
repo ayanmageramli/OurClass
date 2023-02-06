@@ -1,0 +1,88 @@
+ int result = findSum(); // basic version gedin methodun icinde 3 a b ve c ni her defe deyismeli oluram
+            Console.WriteLine(result);
+
+            int result2 = findSum2(15, 20, 25); // bu metodda ise ozum findsum-in icinde toplamasi lazim ededleri yaziriq birbasa
+            Console.WriteLine(result2);
+
+            int result3 = FindSubstraction(20, 25);  //  difference of 2 variables
+            Console.WriteLine(result3);
+
+            decimal result4 = FindDivision(10, 6);  // division of 2 variables
+            Console.WriteLine(result4);
+
+            int result5 = FindMultiplication(20, 25);  //multiplication
+            Console.WriteLine(result5);
+
+            string result6 = FindConcatination("Ayan", "Maharramli"); //concatination of 2 variables
+            Console.WriteLine(result6);
+
+            int result7 = FindLength("Camala");  // text-in simvollari sayini tapir
+            Console.WriteLine(result7);
+
+            double result8 = Findlength2("ayan", "maharramli");  //2 text-in simvollari ceminin kvadrat kokunu tapir
+            Console.WriteLine(result8);
+
+            Console.ReadLine();
+        }
+
+        public static int findSum()  // sum of 3 variables// Qeyd int ve void methodun return type-dir.    
+                                     // Void hecne qaytarmir amma int Findsum yazsaq qaytaracaq;
+
+
+        {
+            int a = 42;     // in basic method
+            int b = 43;
+            int c = 78;
+            int sum = a + b + c;
+            return sum;
+        }
+
+        public static int findSum2(int a, int b, int c)   //in pro method
+        {
+            int sum = a + b + c;
+            return sum;
+        }
+
+        public static int FindSubstraction(int a, int b) // difference of 2 variables
+        {
+            int substraction = a - b;
+            if (substraction < 0)
+            {
+                substraction = -substraction;
+            }
+
+            //substraction= Math.Abs(substraction);  Modul function
+            return substraction;
+        }
+
+        public static decimal FindDivision(decimal a, decimal b)  //division of 2 variables
+        {
+
+            decimal division = a / b;    // cavab tam eded olmasa, kesr olsa decimal netice ala bilmek ucun
+                                         // data type-i int-den decimala deyismek lazimdir.
+            return division;
+        }
+        public static int FindMultiplication(int a, int b)   //Multiplication of 2 variables
+        {
+            int multiplication = a * b;
+            return multiplication;
+        }
+
+        public static string FindConcatination(string name, string surname)  // Concatination of 2 string type variables
+        { 
+            string wholename= name+ " " + surname;  
+            return wholename;
+        }
+        public static int FindLength (string name)   // String type-li variable-in (text-in) uzunlugunu(simvollarin sayi) tapmaq ucun
+        {
+
+            int length = name.Length;   //name.Length funksiyasinin uzunlugunu tapir
+            return length;
+        }
+
+        public static double Findlength2 ( string name, string surname )  // Math.Sqrt function-un komeyi ile  2 stringin simvollari cemini kokde tapib yaziriq
+        {
+           int length=name.Length + surname.Length;
+            return Math.Sqrt(length);
+
+        }
